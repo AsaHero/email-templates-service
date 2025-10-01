@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Задай вопрос вселенной - Anora</title>
+    <!--[if mso]>
+      <noscript>
+        <xml>
+          <o:OfficeDocumentSettings>
+            <o:PixelsPerInch>96</o:PixelsPerInch>
+          </o:OfficeDocumentSettings>
+        </xml>
+      </noscript>
+    <![endif]-->
+
+    <style type="text/css">
+      /* Base */
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial,
+          sans-serif;
+        background: #f5f5f5;
+      }
+      table {
+        border-collapse: collapse;
+        mso-table-lspace: 0pt;
+        mso-table-rspace: 0pt;
+      }
+
+      .email-wrapper {
+        padding: 40px 20px;
+      }
+      .main-card {
+        max-width: 600px;
+        background: linear-gradient(135deg, #120028 0%, #291b3c 100%);
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      }
+      .header-section {
+        padding: 40px 40px 20px 40px;
+        text-align: center;
+        display: flex !important;
+        justify-content: center;
+      }
+      .content-section {
+        padding: 0 40px 40px 40px;
+      }
+      .content-card {
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 16px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .content-inner {
+        padding: 40px;
+        text-align: center;
+      }
+
+      .image-section {
+        position: relative;
+      }
+      .image-container {
+        position: relative;
+        display: inline-block;
+        line-height: 0;
+      }
+      .mystical-image {
+        display: block;
+        border-radius: 16px;
+        max-width: 100%;
+        height: auto;
+        z-index: 1;
+        position: relative;
+      }
+
+      .stars {
+        position: absolute;
+        left: 10%;
+        top: 6%;
+        width: 80%;
+        height: 55%; /* head zone */
+        pointer-events: none;
+        z-index: 2; /* above image */
+      }
+      .star {
+        position: absolute;
+        color: rgba(255, 255, 255, 0.92);
+        line-height: 1;
+      }
+      .s1 {
+        top: 45%;
+        left: 11%;
+        font-size: 12px;
+        opacity: 0.85;
+      }
+      .s2 {
+        top: 30%;
+        left: 90%;
+        font-size: 10px;
+        opacity: 0.75;
+      }
+      .s3 {
+        top: 45%;
+        left: 70%;
+        font-size: 9px;
+        opacity: 0.95;
+      }
+      .s4 {
+        top: 30%;
+        left: 30%;
+        font-size: 12px;
+        opacity: 0.85;
+      }
+      .s5 {
+        top: 22%;
+        left: 66%;
+        font-size: 12px;
+        opacity: 0.8;
+      }
+      .s6 {
+        top: 60%;
+        left: 20%;
+        font-size: 11px;
+        opacity: 0.7;
+      }
+      .s7 {
+        top: 20%;
+        left: 50%;
+        font-size: 20px;
+        opacity: 0.92;
+      }
+
+      .s9 {
+        top: 60%;
+        left: 75%;
+        font-size: 13px;
+        opacity: 0.88;
+      }
+      .s11 {
+        top: 18%;
+        left: 15%;
+        font-size: 9px;
+        opacity: 0.72;
+      }
+
+      /* CTA OVER the image (no gap) */
+      .cta-wrapper {
+        position: absolute;
+        left: 50%;
+        bottom: 19px;
+        transform: translateX(-50%);
+        height: 18%;
+        background: linear-gradient(135deg, #e43c73 0%, #ff4d6d 100%);
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(228, 60, 115, 0.35);
+        text-align: center;
+        white-space: nowrap;
+        z-index: 3;
+        box-sizing: border-box; /* above stars & image */
+      }
+      .cta-link {
+        display: inline-block;
+        padding: 14px 34px;
+        font-size: 18px;
+        font-weight: 600;
+        color: #fff !important;
+        text-decoration: none;
+        border-radius: 12px;
+        height: 100%;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+      }
+      .cta-link:hover {
+        opacity: 0.95;
+      }
+
+      /* helper text below image */
+      .cta-text {
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.7);
+        line-height: 1.5;
+      }
+
+      /* Mobile */
+      @media screen and (max-width: 600px) {
+        .email-wrapper {
+          padding: 20px 10px !important;
+        }
+        .content-section {
+          padding: 0 20px 30px 20px !important;
+        }
+        .content-inner {
+          padding: 30px 20px !important;
+        }
+        .stars {
+          left: 8%;
+          width: 84%;
+          top: 5%;
+          height: 52%;
+        }
+        .cta-link {
+          padding: 12px 26px !important;
+          font-size: 16px !important;
+        }
+        .cta-text {
+          margin-top: 52px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <table role="presentation" width="100%">
+      <tr>
+        <td align="center" class="email-wrapper">
+          <table role="presentation" width="100%" class="main-card">
+            <tr>
+              <td class="header-section">
+                <img
+                  src="https://storage.anora.app/public/static/images/anora-logo.png"
+                  alt="Anora"
+                  width="149"
+                  height="33"
+                  style="
+                    display: block;
+                    border: 0;
+                    outline: none;
+                    text-decoration: none;
+                  "
+                />
+              </td>
+            </tr>
+
+            <tr>
+              <td class="content-section">
+                <table role="presentation" width="100%" class="content-card">
+                  <tr>
+                    <td class="content-inner">
+                      <h1
+                        style="
+                          margin: 0 0 15px 0;
+                          font-size: 28px;
+                          font-weight: 600;
+                          color: #fff;
+                          line-height: 1.3;
+                        "
+                      >
+                        Задай вопрос вселенной
+                      </h1>
+                      <p
+                        style="
+                          margin: 0 0 2px 0;
+                          font-size: 16px;
+                          color: rgba(255, 255, 255, 0.8);
+                          line-height: 1.5;
+                        "
+                      >
+                        Спроси прямо сейчас о том, что тебя беспокоит
+                      </p>
+
+                      <!-- IMAGE with OVERLAYS -->
+                      <table role="presentation" width="100%">
+                        <tr>
+                          <td align="center" class="image-section">
+                            <div class="image-container">
+                              <!-- Stars OVER the image -->
+                              <div class="stars" aria-hidden="true">
+                                <span class="star s1">✦</span>
+                                <span class="star s2">✧</span>
+                                <span class="star s3">✦</span>
+                                <span class="star s4">✧</span>
+                                <span class="star s5">✦</span>
+                                <span class="star s6">✧</span>
+                                <span class="star s7">✦</span>
+                                <span class="star s8">✧</span>
+                                <span class="star s9">✦</span>
+                                <span class="star s10">✧</span>
+                                <span class="star s11">✦</span>
+                                <span class="star s12">✧</span>
+                              </div>
+
+                              <!-- Mystical Woman -->
+                              <img
+                                src="https://storage.anora.app/public/static/images/girl.png"
+                                alt="Mystical woman with cosmic energy"
+                                class="mystical-image"
+                                width="280"
+                                style="
+                                  border: 0;
+                                  outline: none;
+                                  text-decoration: none;
+                                  border-radius: 16px;
+                                "
+                              />
+
+                              <!-- CTA OVER the bottom of the image -->
+                              <div class="cta-wrapper">
+                                <a
+                                  href="https://anora.app/app/practices?utm_source=mail"
+                                  class="cta-link"
+                                  >Спросить вселенную</a
+                                >
+                              </div>
+                            </div>
+
+                            <!-- Helper text spaced below (since button is over the image) -->
+                            <p class="cta-text">
+                              Если вы не регистрировались в Anora, просто
+                              игнорируйте<br />это письмо.
+                            </p>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+
+          <!-- Footer -->
+          <table role="presentation" width="100%" style="max-width: 600px">
+            <tr>
+              <td style="padding: 30px 40px; text-align: center">
+                <p style="margin: 0 0 15px 0; font-size: 14px; color: #666">
+                  С уважением, команда
+                  <strong style="color: #120028">Anora</strong>
+                </p>
+                <p
+                  style="
+                    margin: 0;
+                    font-size: 12px;
+                    color: #999;
+                    line-height: 1.5;
+                  "
+                >
+                  Это автоматическое письмо, не отвечайте на него.<br />
+                  Если у вас есть вопросы, свяжитесь с нами в Telegram:
+                  <a href="https://t.me/anora_ai_support">Нажмите здесь</a>
+                </p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+
+    <!-- Dark-mode spacer -->
+    <div style="display: none; max-height: 0; overflow: hidden">
+      ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌
+      ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌
+      ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌
+      ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌
+      ‌ ‌ ‌
+    </div>
+  </body>
+</html>
