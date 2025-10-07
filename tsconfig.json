@@ -1,12 +1,62 @@
 {
   "compilerOptions": {
-    "composite": false,
+    /* Language and Environment */
+    "target": "ES2022",
+    "lib": ["ES2022"],
     "jsx": "react-jsx",
-    "skipLibCheck": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+
+    /* Modules */
+    "module": "commonjs",
+    "rootDir": "./",
+    "moduleResolution": "node",
+    "baseUrl": "./",
+    "resolveJsonModule": true,
+
+    /* Emit */
+    "outDir": "./dist",
+    "removeComments": true,
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+
+    /* Interop Constraints */
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+
+    /* Type Checking */
     "strict": true,
-    "noEmit": true,
-    "strictNullChecks": true
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+
+    /* Completeness */
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true
   },
-  "include": ["**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules", ".react-email"]
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "emails/**/*.tsx",
+    "components/**/*.tsx",
+    "layouts/**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    ".react-email",
+    "**/*.spec.ts",
+    "**/*.test.ts"
+  ]
 }
